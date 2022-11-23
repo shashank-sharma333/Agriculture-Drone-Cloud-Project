@@ -1,0 +1,14 @@
+.rewards{
+    display:flex;
+    flex-direction: row; 
+    justify-content: center; 
+    align-items: center
+    
+}
+
+body {
+    background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTPLg4DxefMQ_u2wKKPJVvuHWWrpxDP5V_gsw&usqp=CAU");
+  background-repeat: repeat;
+  background-color: #cccccc;
+  background-size: cover;
+}
