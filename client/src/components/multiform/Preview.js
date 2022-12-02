@@ -50,6 +50,8 @@ const Final = ({ values,props }) => {
     <>
       <Card style={{ marginTop: 100, textAlign: "left" }}>
         <Card.Body>
+        <Card.Title>Preview Information</Card.Title>
+
           <p>
             <strong>Name :</strong> {name}{" "}
           </p>

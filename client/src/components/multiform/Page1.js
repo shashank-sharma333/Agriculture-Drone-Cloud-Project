@@ -23,9 +23,12 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
   };
 
   return (
+    
     <div>
       <Card style={{ marginTop: 100 }}>
         <Card.Body>
+        <Card.Title>Farmer Information</Card.Title>
+
           <Form onSubmit={submitFormData}>
             <Form.Group className="mb-3">
               <Form.Label>Name</Form.Label>
@@ -117,9 +120,12 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
               )}
             </Form.Group>
             </Form.Group>
+            <div style={{ display: "flex", justifyContent: "space-around" }}>
+
             <Button variant="primary" type="submit">
               Continue
             </Button>
+            </div>
           </Form>
         </Card.Body>
       </Card>

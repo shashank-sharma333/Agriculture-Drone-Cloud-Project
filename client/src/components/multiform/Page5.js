@@ -20,6 +20,7 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
     <>
       <Card style={{ marginTop: 100 }}>
         <Card.Body>
+        <Card.Title>Driving License Information</Card.Title>
           <Form onSubmit={submitFormData}>
             <Form.Group className="mb-3">
               <Form.Label>Driver License Name</Form.Label>
@@ -57,9 +58,9 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
             </Form.Group>
             
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <Button variant="primary" onClick={prevStep}>
+              {/* <Button variant="primary" onClick={prevStep}>
                 Previous
-              </Button>
+              </Button> */}
 
               <Button variant="primary" type="submit">
               Continue
