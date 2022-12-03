@@ -30,7 +30,9 @@ function Navbar() {
         <a className="navbar-brand" href="/">
           AgriculturalDrone
         </a>
-      
+        <a className="navbar-brand" href="../MyBookings">
+          My Bookings
+        </a>
         <a className="navbar-brand" href="../HelpScreen">
           About
         </a>

@@ -285,11 +285,12 @@ p {
 
 .button-sign-up {
   padding: 19px 9px;
-  box-sizing: border-box;
-  border-radius: 5px;
-  background-color: rgba(185, 185, 195, 1);
-  width: 252px;
+  box-sizing: content-box;
+  border-radius: 20px;
+  background-color: rgb(255, 255, 255) !important;
+  width: 450px!important;
   height: 68px;
+  text-align: center !important;
 }
 
 .txt-574 {
