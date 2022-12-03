@@ -9,6 +9,7 @@ const bookingSchema = mongoose.Schema({
     totalDays:{type:Number , required:true},
     totalAmount:{type:Number, required:true},
     transactionId:{type:String, required:true},
+    serviceID:{type:String, required:true},
     status:{type:String, required:true , default:'booked'},
 },{
     timestamps:true,

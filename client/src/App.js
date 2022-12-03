@@ -13,7 +13,7 @@ import Landingscreen from "./screens/Landingscreen";
 import Adminscreen from "./screens/Adminscreen";
 import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
-
+import MyBookings from "./screens/MyBookingScreen"
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
 // import hotelimage from "./images/back.png";
@@ -51,6 +51,9 @@ function App() {
          <Route path="/registerfarmer" component={RegisterFarmerScreen}/>
          <Route path="/selectionscreen" component={SelectionScreen}/>
          <Route path="/registerpilot" component={RegisterPilotScreen}/>
+         <Route path="/MyBookings" component={MyBookings}/>
+        
+         
 
       </BrowserRouter>
     </div>
