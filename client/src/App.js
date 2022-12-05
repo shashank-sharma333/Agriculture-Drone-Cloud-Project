@@ -17,11 +17,8 @@ import Adminscreen from "./screens/Adminscreen";
 import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
 import Form from "./screens/Form";
-import RegisterFarmerScreen2 from "./screens/RegisterFarmerScreen2";
 import CreateProfile from "./screens/CreateProfile";
 import CreatePilotProfile from "./screens/CreatePilotProfile";
-import TestFile from "./screens/TestFile";
-
 import MyBookings from "./screens/MyBookingScreen"
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
