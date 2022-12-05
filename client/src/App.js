@@ -16,7 +16,6 @@ import Landingscreen from "./screens/Landingscreen";
 import Adminscreen from "./screens/Adminscreen";
 import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
-import Form from "./screens/Form";
 import CreateProfile from "./screens/CreateProfile";
 import CreatePilotProfile from "./screens/CreatePilotProfile";
 import MyBookings from "./screens/MyBookingScreen"
@@ -58,7 +57,6 @@ function App() {
          <Route path="/selectionscreen" component={SelectionScreen}/>
          <Route path="/registerpilot" component={RegisterPilotScreen}/>
          <Route path="/form" component={Form}/>
-         <Route path="/component" component={RegisterFarmerScreen2}/>
          <Route path="/createprofile" component={CreateProfile}/>
          <Route path="/createpilotprofile" component={CreatePilotProfile}/>
          <Route path="/MyBookings" component={MyBookings}/>
