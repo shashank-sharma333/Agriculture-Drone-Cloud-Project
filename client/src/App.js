@@ -56,7 +56,6 @@ function App() {
          <Route path="/registerfarmer" component={RegisterFarmerScreen}/>
          <Route path="/selectionscreen" component={SelectionScreen}/>
          <Route path="/registerpilot" component={RegisterPilotScreen}/>
-         <Route path="/form" component={Form}/>
          <Route path="/createprofile" component={CreateProfile}/>
          <Route path="/createpilotprofile" component={CreatePilotProfile}/>
          <Route path="/MyBookings" component={MyBookings}/>
