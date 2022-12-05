@@ -7,7 +7,18 @@ module.exports = router ;
 
 router.post("/farmerDetails", async(req, res) => {
   
-    const {name,phoneNumber,email,birthday,gender,farmAddress,city,country,zipcode} = req.body
+    const {name,phoneNumber,email,birthday,gender,farmAddress,city,country,zipcode,plotType,
+        typeDetail,
+        landOwner,
+        landAddress,
+        landCity,
+        landCountry,
+        landZipcode,
+        totalArea,
+        certificateDate,
+        certificateLink,
+        driverName,
+        licenseId} = req.body
 
     console.log(name)
     console.log(phoneNumber)
@@ -19,7 +30,18 @@ router.post("/farmerDetails", async(req, res) => {
     console.log(country)
     console.log(zipcode)
 
-    const newUser = new Farmer({name,phoneNumber,email,birthday,gender,farmAddress,city,country,zipcode})
+    const newUser = new Farmer({name,phoneNumber,email,birthday,gender,farmAddress,city,country,zipcode,plotType,
+        typeDetail,
+        landOwner,
+        landAddress,
+        landCity,
+        landCountry,
+        landZipcode,
+        totalArea,
+        certificateDate,
+        certificateLink,
+        driverName,
+        licenseId})
 
     try {
         newUser.save()
@@ -54,17 +76,29 @@ router.post("/farmDetails", async(req, res) => {
 
 router.post("/pilotDetails", async(req, res) => {
   
-    const {name,phoneNumber,email,birthday,gender,pilotCertificateId,drivingLicenseNumber} = req.body
+    const {name,phoneNumber,email,birthday,gender,certificateId,
+        pilotName,
+        country,
+        address,  
+        city,
+        driverName,
+        licenseId} = req.body
     
     console.log(name)
     console.log(phoneNumber)
     console.log(email)
     console.log(birthday)
     console.log(gender)
-    console.log(pilotCertificateId)
-    console.log(drivingLicenseNumber)
 
-    const newUser = new Pilot({name,phoneNumber,email,birthday,gender,pilotCertificateId,drivingLicenseNumber})
+    
+
+    const newUser = new Pilot({name,phoneNumber,email,birthday,gender,certificateId,
+        pilotName,
+        country,
+        address,  
+        city,
+        driverName,
+        licenseId})
 
     try {
         newUser.save()

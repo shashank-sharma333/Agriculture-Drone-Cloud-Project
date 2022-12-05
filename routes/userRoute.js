@@ -115,6 +115,30 @@ router.post("/deleteuser", async(req, res) => {
 
 });
 
+router.put("/updateUserRoleAndRegistrationStatus", async(req, res) => {
+    console.log(req, res);
+    const {email} = req.body;
+    try {
+        const user = await User.findOneAndUpdate({email:email},{$set:{isRegistered: true,role:"farmer"}});
+        res.send("successful");
+    } catch (error) {
+        return res.status(400).json({ message: error });
+    }
+  
+});
+
+router.put("/updatePilotRoleAndRegistrationStatus", async(req, res) => {
+    console.log(req, res);
+    const {email} = req.body;
+    try {
+        const user = await User.findOneAndUpdate({email:email},{$set:{isRegistered: true,role:"pilot"}});
+        res.send("successful");
+    } catch (error) {
+        return res.status(400).json({ message: error });
+    }
+  
+});
+
 
 
 module.exports = router
