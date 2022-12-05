@@ -7,7 +7,8 @@ import Homescreen from "./screens/Homescreen";
 import Navbar from "./components/Navbar";
 import Loginscreen from "./screens/Loginscreen";
 import Registerscreen from "./screens/Registerscreen";
-import 'antd/dist/antd.css';
+// import 'antd/dist/antd.css';
+import 'antd/dist/antd.min.css';
 import Bookingscreen from "./screens/Bookingscreen";
 import Profilescreen from "./screens/Profilescreen";
 import Helpscreen from "./screens/Helpscreen";
@@ -21,8 +22,7 @@ import CreateProfile from "./screens/CreateProfile";
 import CreatePilotProfile from "./screens/CreatePilotProfile";
 import TestFile from "./screens/TestFile";
 
-
-
+import MyBookings from "./screens/MyBookingScreen"
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
 // import hotelimage from "./images/back.png";
@@ -64,8 +64,7 @@ function App() {
          <Route path="/component" component={RegisterFarmerScreen2}/>
          <Route path="/createprofile" component={CreateProfile}/>
          <Route path="/createpilotprofile" component={CreatePilotProfile}/>
-
-
+         <Route path="/MyBookings" component={MyBookings}/>
       </BrowserRouter>
     </div>
     // </div>
