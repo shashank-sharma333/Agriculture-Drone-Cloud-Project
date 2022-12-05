@@ -3,42 +3,34 @@ import { Form, Card, Button } from "react-bootstrap";
 import validator from "validator";
 
 // creating functional component ans getting props from app.js and destucturing them
-const StepOne = ({ nextStep, handleFormData, values }) => {
-  //creating error state for validation
+const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
+   //creating error state for validation
   const [error, setError] = useState(false);
 
-  // after form submit validating the form data using validator
+    // after form submit validating the form data using validator
   const submitFormData = (e) => {
     e.preventDefault();
 
-    // checking if value of first name and last name is empty show error else take to step 2
-    if (
-      validator.isEmpty(values.name) ||
-      validator.isEmpty(values.email)
-    ) {
+     // checking if value of first name and last name is empty show error else take to next step
+    if (validator.isEmpty(values.farmAddress)) {
       setError(true);
     } else {
       nextStep();
     }
   };
-
   return (
-    
-    <div>
+    <>
       <Card style={{ marginTop: 100 }}>
         <Card.Body>
-        <Card.Title>Farmer Information</Card.Title>
-
+        <Card.Title>Remote Pilot Certificate</Card.Title>
           <Form onSubmit={submitFormData}>
             <Form.Group className="mb-3">
-              <Form.Label>Name</Form.Label>
+              <Form.Label>Certificate ID Number</Form.Label>
               <Form.Control
                 style={{ border: error ? "2px solid red" : "" }}
-                name="Name"
-                defaultValue={values.firstName}
                 type="text"
-                placeholder="Name"
-                onChange={handleFormData("name")}
+                placeholder="certificateId"
+                onChange={handleFormData("certificateId")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
@@ -49,14 +41,12 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
               )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Phone Number</Form.Label>
+              <Form.Label>Name of Certificate Holder</Form.Label>
               <Form.Control
                 style={{ border: error ? "2px solid red" : "" }}
-                name="Phone Number"
-                defaultValue={values.lastName}
-                type="number"
-                placeholder="Phone Number"
-                onChange={handleFormData("phoneNumber")}
+                type="text"
+                placeholder="pilotName"
+                onChange={handleFormData("pilotName")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
@@ -67,32 +57,12 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
               )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Email</Form.Label>
+              <Form.Label>Country</Form.Label>
               <Form.Control
                 style={{ border: error ? "2px solid red" : "" }}
-                name="Email"
-                defaultValue={values.lastName}
-                type="email"
-                placeholder="Email"
-                onChange={handleFormData("email")}
-              />
-              {error ? (
-                <Form.Text style={{ color: "red" }}>
-                  This is a required field
-                </Form.Text>
-              ) : (
-                ""
-              )}
-              <Form.Group className="mb-3">
-              <Form.Label>BirthDay</Form.Label>
-              
-              <Form.Control
-                style={{ border: error ? "2px solid red" : "" }}
-                name="BirthDay"
-                defaultValue={values.lastName}
                 type="text"
-                placeholder="BirthDay"
-                onChange={handleFormData("birthday")}
+                placeholder="country"
+                onChange={handleFormData("country")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
@@ -103,14 +73,12 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
               )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Gender</Form.Label>
+              <Form.Label>Address</Form.Label>
               <Form.Control
                 style={{ border: error ? "2px solid red" : "" }}
-                name="Gender"
-                defaultValue={values.lastName}
                 type="text"
-                placeholder="Gender"
-                onChange={handleFormData("gender")}
+                placeholder="address"
+                onChange={handleFormData("address")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
@@ -120,18 +88,33 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
                 ""
               )}
             </Form.Group>
+            <Form.Group className="mb-3">
+              <Form.Label>City</Form.Label>
+              <Form.Control
+                style={{ border: error ? "2px solid red" : "" }}
+                type="text"
+                placeholder="city"
+                onChange={handleFormData("city")}
+              />
+              {error ? (
+                <Form.Text style={{ color: "red" }}>
+                  This is a required field
+                </Form.Text>
+              ) : (
+                ""
+              )}
             </Form.Group>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
 
-            <Button variant="primary" type="submit">
+              <Button variant="primary" onClick={nextStep} type="submit">
               Continue
-            </Button>
+              </Button>
             </div>
           </Form>
         </Card.Body>
       </Card>
-    </div>
+    </>
   );
 };
 
-export default StepOne;
+export default StepTwo;

@@ -27,7 +27,7 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
     <div>
       <Card style={{ marginTop: 100 }}>
         <Card.Body>
-        <Card.Title>Farmer Information</Card.Title>
+        <Card.Title>Pilot Information</Card.Title>
 
           <Form onSubmit={submitFormData}>
             <Form.Group className="mb-3">
@@ -85,7 +85,7 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
               )}
               <Form.Group className="mb-3">
               <Form.Label>BirthDay</Form.Label>
-              
+  
               <Form.Control
                 style={{ border: error ? "2px solid red" : "" }}
                 name="BirthDay"
@@ -103,7 +103,7 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
               )}
             </Form.Group>
             <Form.Group className="mb-3">
-              <Form.Label>Gender</Form.Label>
+              <Form.Label>Gender</Form.Label>  
               <Form.Control
                 style={{ border: error ? "2px solid red" : "" }}
                 name="Gender"
@@ -122,7 +122,6 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
             </Form.Group>
             </Form.Group>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-
             <Button variant="primary" type="submit">
               Continue
             </Button>

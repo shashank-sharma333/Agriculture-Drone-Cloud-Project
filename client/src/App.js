@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import React, { Component }  from 'react';
+
 import {BrowserRouter, Route , path} from 'react-router-dom'
 import Homescreen from "./screens/Homescreen";
 import Navbar from "./components/Navbar";
@@ -13,6 +15,13 @@ import Landingscreen from "./screens/Landingscreen";
 import Adminscreen from "./screens/Adminscreen";
 import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
+import Form from "./screens/Form";
+import RegisterFarmerScreen2 from "./screens/RegisterFarmerScreen2";
+import CreateProfile from "./screens/CreateProfile";
+import CreatePilotProfile from "./screens/CreatePilotProfile";
+import TestFile from "./screens/TestFile";
+
+
 
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
@@ -51,6 +60,11 @@ function App() {
          <Route path="/registerfarmer" component={RegisterFarmerScreen}/>
          <Route path="/selectionscreen" component={SelectionScreen}/>
          <Route path="/registerpilot" component={RegisterPilotScreen}/>
+         <Route path="/form" component={Form}/>
+         <Route path="/component" component={RegisterFarmerScreen2}/>
+         <Route path="/createprofile" component={CreateProfile}/>
+         <Route path="/createpilotprofile" component={CreatePilotProfile}/>
+
 
       </BrowserRouter>
     </div>
