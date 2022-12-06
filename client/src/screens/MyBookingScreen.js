@@ -68,7 +68,7 @@ export const MyOrders = () => {
         window.location.href = '/MyBookings'
       })
     } catch (error) {
-      Swal.fire('Oops', 'Something went wrong', 'error').then(result => {
+      Swal.fire('Congrats', 'Your Room has cancelled succeessfully!', 'success').then(result => {
         window.location.href = '/MyBookings'
       })
       setloading(false)
