@@ -61,7 +61,7 @@ import React from "react"
        
 
             <p className="txt-112">Select Role to Register As</p>
-        <a href="/registerfarmer">
+        <a href="/createprofile">
             <img    
             src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/0ppb7yxkqy8-1804%3A2152?alt=media&token=280f1cb8-beb9-4309-a6e8-3b7011a1464a"
             alt="Not Found"

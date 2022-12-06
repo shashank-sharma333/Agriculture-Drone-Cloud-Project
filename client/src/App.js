@@ -1,5 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
+import React, { Component }  from 'react';
+
 import {BrowserRouter, Route , path} from 'react-router-dom'
 import Homescreen from "./screens/Homescreen";
 import Navbar from "./components/Navbar";
@@ -14,10 +16,16 @@ import Landingscreen from "./screens/Landingscreen";
 import Adminscreen from "./screens/Adminscreen";
 import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
+import CreateProfile from "./screens/CreateProfile";
+import CreatePilotProfile from "./screens/CreatePilotProfile";
 import MyBookings from "./screens/MyBookingScreen"
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
+
 import DroneManagement from "./screens/DroneManagement";
+
+import MyBookingScreen from "./screens/MyBookingScreen";
+
 // import hotelimage from "./images/back.png";
     
 function App() {
@@ -53,11 +61,15 @@ function App() {
          <Route path="/registerfarmer" component={RegisterFarmerScreen}/>
          <Route path="/selectionscreen" component={SelectionScreen}/>
          <Route path="/registerpilot" component={RegisterPilotScreen}/>
+
          <Route path="/MyBookings" component={MyBookings}/>
          <Route path="/droneManagement" component={DroneManagement}/>
         
          
 
+         <Route path="/createprofile" component={CreateProfile}/>
+         <Route path="/createpilotprofile" component={CreatePilotProfile}/>
+         <Route path="/MyBookings" component={MyBookingScreen}/>
       </BrowserRouter>
     </div>
     // </div>

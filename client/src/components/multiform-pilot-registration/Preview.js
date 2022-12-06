@@ -1,6 +1,7 @@
 import React from "react";
 import { Card,Button } from "react-bootstrap";
 import axios from "axios";
+import { add } from "date-fns";
 
 
 // function saveFarmerDetails (props)  {
@@ -18,31 +19,22 @@ const Final = ({ values,props }) => {
     email,
     birthday,
     gender,
-    farmAddress,
-    city,
+    certificateId,
+    pilotName,
     country,
-    zipcode,
-    plotType,
-    typeDetail,
-    landOwner,
-    landAddress,
-    landCity,
-    landCountry,
-    landZipcode,
-    totalArea,
-    certificateDate,
-    certificateLink,
+    address,  
+    city,
     driverName,
     licenseId } = values;
 
-    const saveFarmerDetails = async (props) => {
+    const savePilotDetails = async (props) => {
       // 👇️ navigate to /contacts
       // navigate.push('/');
       // const result = await axios.post('/api/farmers/farmerDetails',values)
-    console.log(values)
+      axios.put('/api/users/updatePilotRoleAndRegistrationStatus', { email: JSON.parse(localStorage.getItem("currentUser")).email });
 
-    axios.put('/api/users/updateUserRoleAndRegistrationStatus', { email: JSON.parse(localStorage.getItem("currentUser")).email });
-     const result = await axios.post('/api/farmers/farmerDetails',values).then((res)=>{
+    console.log(values)
+     const result = await axios.post('/api/farmers/pilotDetails',values).then((res)=>{
         console.log("asasda",res);
         window.location.href='/'
      })
@@ -52,7 +44,7 @@ const Final = ({ values,props }) => {
     <>
       <Card style={{ marginTop: 100, textAlign: "left" }}>
         <Card.Body>
-        <Card.Title>Review Registration Information</Card.Title>
+        <Card.Title>Review Pilot Registration Information</Card.Title>
 
           <p>
             <strong>Name :</strong> {name}{" "}
@@ -70,46 +62,19 @@ const Final = ({ values,props }) => {
             <strong>Gender :</strong> {gender}{" "}
           </p>
           <p>
-            <strong>FarmAddress :</strong> {farmAddress}{" "}
+            <strong>Certificate Id :</strong> {certificateId}{" "}
           </p>
           <p>
-            <strong>City :</strong> {city}{" "}
+            <strong>Pilot Name :</strong> {pilotName}{" "}
           </p>
           <p>
             <strong>Country :</strong> {country}{" "}
           </p>
           <p>
-            <strong>Zipcode :</strong> {zipcode}{" "}
+            <strong>Address :</strong> {address}{" "}
           </p>
           <p>
-            <strong>Plot Type :</strong> {plotType}{" "}
-          </p>
-          <p>
-            <strong>TypeDetail :</strong> {typeDetail}{" "}
-          </p>
-          <p>
-            <strong>Land Owner :</strong> {landOwner}{" "}
-          </p>
-          <p>
-            <strong>Land Address :</strong> {landAddress}{" "}
-          </p>
-          <p>
-            <strong>Land City :</strong> {landCity}{" "}
-          </p>
-          <p>
-            <strong>Land Country :</strong> {landCountry}{" "}
-          </p>
-          <p>
-            <strong>Land Zip Code :</strong> {landZipcode}{" "}
-          </p>
-          <p>
-            <strong>Total Area :</strong> {totalArea}{" "}
-          </p>
-          <p>
-            <strong>Certificate Date :</strong> {certificateDate}{" "}
-          </p>
-          <p>
-            <strong>Certificate Link :</strong> {certificateLink}{" "}
+            <strong>City :</strong> {city}{" "}
           </p>
           <p>
             <strong>Driver Name :</strong> {driverName}{" "}
@@ -120,7 +85,7 @@ const Final = ({ values,props }) => {
         </Card.Body>
         <div style={{ display: "flex", justifyContent: "space-around" }}>
 
-              <Button variant="primary" type="submit" onClick={()=>saveFarmerDetails(props)}>
+              <Button variant="primary" type="submit" onClick={()=>savePilotDetails(props)}>
               Submit
               </Button>
             </div>

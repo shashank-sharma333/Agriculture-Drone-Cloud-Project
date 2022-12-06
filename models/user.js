@@ -4,6 +4,8 @@ const userSchema = mongoose.Schema({
     name : {type: String , require},
     email : {type: String , require},
     password : {type: String , require},
+    role : {type: String , require},
+    isRegistered : {type: Boolean,require,default: false},
     isAdmin : {type: Boolean , require , default: false},
     opt_reward: {type: Number,required:true, default:0},
     rewards: {type: Number,required:true, default:100}

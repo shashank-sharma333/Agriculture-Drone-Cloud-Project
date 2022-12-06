@@ -9,7 +9,19 @@ const farmerSchema = mongoose.Schema({
     farmAddress: {type: String,require},
     city: {type: String,require},
     country: {type: String,require},
-    zipcode: {type: String,require}
+    zipcode: {type: String,require},
+    plotType: {type: String,require},
+    typeDetail: {type: String,require},
+    landOwner: {type: String,require},
+    landAddress: {type: String,require},
+    landCity: {type: String,require},
+    landCountry: {type: String,require},
+    landZipcode: {type: String,require},
+    totalArea: {type: String,require},
+    certificateDate: {type: String,require},
+    certificateLink: {type: String,require},
+    driverName: {type: String,require},
+    licenseId: {type: String,require}
 } , {
     timestamps : true
 })
