@@ -48,7 +48,7 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
                 style={{ border: error ? "2px solid red" : "" }}
                 type="text"
                 placeholder="landAddress"
-                onChange={handleFormData("address")}
+                onChange={handleFormData("landAddress")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
@@ -64,7 +64,7 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
                 style={{ border: error ? "2px solid red" : "" }}
                 type="text"
                 placeholder="landCity"
-                onChange={handleFormData("city")}
+                onChange={handleFormData("landCity")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
@@ -80,7 +80,7 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
                 style={{ border: error ? "2px solid red" : "" }}
                 type="text"
                 placeholder="landCountry"
-                onChange={handleFormData("country")}
+                onChange={handleFormData("landCountry")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
@@ -96,7 +96,7 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
                 style={{ border: error ? "2px solid red" : "" }}
                 type="text"
                 placeholder="landZipcode"
-                onChange={handleFormData("zipcode")}
+                onChange={handleFormData("landZipcode")}
               />
               {error ? (
                 <Form.Text style={{ color: "red" }}>
