@@ -18,10 +18,15 @@ import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
 import CreateProfile from "./screens/CreateProfile";
 import CreatePilotProfile from "./screens/CreatePilotProfile";
-import MyBookings from "./screens/MyBookingScreen"
-import testMap from "./screens/TestMap"
+
+
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
+
+import DroneManagement from "./screens/Dronemanagement";
+
+import MyBookingScreen from "./screens/MyBookingScreen";
+
 // import hotelimage from "./images/back.png";
     
 function App() {
@@ -57,11 +62,16 @@ function App() {
          <Route path="/registerfarmer" component={RegisterFarmerScreen}/>
          <Route path="/selectionscreen" component={SelectionScreen}/>
          <Route path="/registerpilot" component={RegisterPilotScreen}/>
+
+         
+         <Route path="/droneManagement" component={DroneManagement}/>
+        
+         
+
          <Route path="/createprofile" component={CreateProfile}/>
          <Route path="/createpilotprofile" component={CreatePilotProfile}/>
-         <Route path="/MyBookings" component={MyBookings}/>
          <Route path="/testMap" component={testMap}/>
-
+         <Route path="/MyBookings" component={MyBookingScreen}/>
       </BrowserRouter>
     </div>
     // </div>
