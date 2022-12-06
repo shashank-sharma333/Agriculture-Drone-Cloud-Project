@@ -73,7 +73,7 @@ import React from "react"
             <p className="txt-779">Farmer</p>
             <p className="txt-723">Drone Pilot</p>
             </div>
-            <a href="/registerpilot">
+            <a href="/createpilotprofile">
             <img
             src="https://firebasestorage.googleapis.com/v0/b/unify-bc2ad.appspot.com/o/0ppb7yxkqy8-1804%3A2155?alt=media&token=1ae276d0-51af-4d2f-b7a6-a39ae2d64c87"
             alt="Not Found"

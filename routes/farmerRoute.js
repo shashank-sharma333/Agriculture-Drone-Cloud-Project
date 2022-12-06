@@ -18,7 +18,8 @@ router.post("/farmerDetails", async(req, res) => {
         certificateDate,
         certificateLink,
         driverName,
-        licenseId} = req.body
+        licenseId,
+        certificate} = req.body
 
     console.log(name)
     console.log(phoneNumber)
@@ -41,7 +42,8 @@ router.post("/farmerDetails", async(req, res) => {
         certificateDate,
         certificateLink,
         driverName,
-        licenseId})
+        licenseId,
+        certificate})
 
     try {
         newUser.save()

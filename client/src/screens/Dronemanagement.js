@@ -226,7 +226,7 @@ function Homescreen() {
               <select className="form-control m-2" value={type} onChange={(e)=>{filterByType(e.target.value)}} >
 
                 <option value="all">Select Drone type</option>
-                <option value="suite">DJI MATRICE 200</option>
+                <option value="DJI MATRICE 200">DJI MATRICE 200</option>
                 <option value="classic">DJI PANTOM</option>
                 <option value="classic">Phoenix 6 </option>
 

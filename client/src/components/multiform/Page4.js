@@ -12,11 +12,12 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
     e.preventDefault();
 
      // checking if value of first name and last name is empty show error else take to next step
-    if (validator.isEmpty(values.landOwner)) {
-      setError(true);
-    } else {
-      nextStep();
-    }
+    // if (validator.isEmpty(values.landOwner)) {
+    //   setError(true);
+    // } else {
+    //   nextStep();
+    // }
+    nextStep();
   };
   return (
     <>
@@ -138,24 +139,12 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
               )}
               
             </Form.Group>
-            <Form.Group className="mb-3">
-              <Form.Label> Certificate Link</Form.Label>
-              <Form.Control
-                style={{ border: error ? "2px solid red" : "" }}
-                type="text"
-                placeholder="certificateLink"
-                onChange={handleFormData("certificateLink")}
-              />
-              {error ? (
-                <Form.Text style={{ color: "red" }}>
-                  This is a required field
-                </Form.Text>
-              ) : (
-                ""
-              )}
-              
+            <Form.Group controlId="formFile" className="mb-3">
+        <Form.Label>Upload Certificate</Form.Label>
+        <Form.Control type="file" 
+         placeholder="certificate"
+         onChange={handleFormData("certificate")}/>
             </Form.Group>
-            
             <div style={{ display: "flex", justifyContent: "space-around" }}>
               {/* <Button variant="primary" onClick={prevStep}>
                 Previous

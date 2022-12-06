@@ -62,7 +62,7 @@ function Bookingscreen({ match }) {
 
     const navigateToHome = () => {
         // 👇️ navigate to /contacts
-        navigate.push('/');
+        navigate.push('/home');
     }
     
 
@@ -365,7 +365,8 @@ function Bookingscreen({ match }) {
                             
                             <p> Drone Rent Per Day : <b>{room.rentperday}</b></p>
                             <h1><b>Total Amount : {totalAmount} /-</b></h1>
-
+                            <button onClick={navigateToHome} className="btn btn-primary">Back</button>
+                            &nbsp;
                             <StripeCheckout
                                 amount={totalAmount * 100}
                                 shippingAddress
@@ -374,11 +375,9 @@ function Bookingscreen({ match }) {
                                 currency='USD'
                             >
 
-                                <button onClick={navigateToHome} className="btn btn-primary">Back</button>
-                                &nbsp;
                                 <button className='btn btn-primary'>Pay Now</button>
-
                             </StripeCheckout>
+
                         </div>
 
 

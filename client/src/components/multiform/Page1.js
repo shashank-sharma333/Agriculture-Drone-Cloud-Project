@@ -6,6 +6,8 @@ import validator from "validator";
 const StepOne = ({ nextStep, handleFormData, values }) => {
   //creating error state for validation
   const [error, setError] = useState(false);
+  const [type, setType] = useState("Male");
+
 
   // after form submit validating the form data using validator
   const submitFormData = (e) => {
@@ -90,7 +92,7 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
                 style={{ border: error ? "2px solid red" : "" }}
                 name="BirthDay"
                 defaultValue={values.lastName}
-                type="text"
+                type="date"
                 placeholder="BirthDay"
                 onChange={handleFormData("birthday")}
               />
@@ -105,13 +107,30 @@ const StepOne = ({ nextStep, handleFormData, values }) => {
             <Form.Group className="mb-3">
               <Form.Label>Gender</Form.Label>
               <Form.Control
+          name="Gender"
+          placeholder="Gender"
+          as="select"
+          value={type}
+          onChange={handleFormData("gender")}
+        //   onChange={e => {
+        //     console.log("e.target.value", e.target.value);
+        //   handleFormData("gender");
+        //      setType(e.target.value);
+        //  }}
+        >
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+        </Form.Control>
+
+
+              {/* <Form.Control
                 style={{ border: error ? "2px solid red" : "" }}
                 name="Gender"
                 defaultValue={values.lastName}
                 type="text"
                 placeholder="Gender"
                 onChange={handleFormData("gender")}
-              />
+              /> */}
               {error ? (
                 <Form.Text style={{ color: "red" }}>
                   This is a required field

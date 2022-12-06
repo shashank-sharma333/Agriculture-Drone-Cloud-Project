@@ -21,7 +21,8 @@ const farmerSchema = mongoose.Schema({
     certificateDate: {type: String,require},
     certificateLink: {type: String,require},
     driverName: {type: String,require},
-    licenseId: {type: String,require}
+    licenseId: {type: String,require},
+    certificate:{type: String,require,default:false}
 } , {
     timestamps : true
 })

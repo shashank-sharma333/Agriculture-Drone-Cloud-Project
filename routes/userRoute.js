@@ -32,7 +32,8 @@ router.post("/login", async(req, res) => {
                 name : user[0].name , 
                 email : user[0].email, 
                 isAdmin : user[0].isAdmin, 
-                _id : user[0]._id
+                _id : user[0]._id,
+                role: user[0].role
             }
             res.send(currentUser);
         }

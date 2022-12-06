@@ -75,27 +75,30 @@ router.post("/bookroom", async (req, res) => {
       
           await newbooking.save(async (err, booking) => {
             const oldroom = await Room.findOne({ _id: room._id });
-      
+            console.log(oldroom)
             oldroom.currentbookings.push({
-              bookingid: booking._id,
+              bookingid: booking._id, 
               fromdate: moment(fromdate).format('MM-DD-YYYY'),
               todate: moment(todate).format('MM-DD-YYYY'),
               userid: user._id,
               status:'booked'
             });
             await oldroom.save();
+            await newbooking.save();
           });
+
+
       
           res.send("Room Booked Successfully");
-        } catch (error) {
+        } 
+        
+        catch (error) {
           console.log("Error");
           console.log(error);
           // return res.status(200).json({ message: error });
           res.send("Room Booked Successfully");
         }
-      } else {
-        res.send("Payment failed");
-      }
+      } 
     } catch (error) {
       console.log(JSON.stringify(error));
      // return res.status(200).json({ message: "Something went wrong" + error });

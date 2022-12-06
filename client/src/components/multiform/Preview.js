@@ -32,8 +32,9 @@ const Final = ({ values,props }) => {
     totalArea,
     certificateDate,
     certificateLink,
+    certificate,
     driverName,
-    licenseId } = values;
+    licenseId} = values;
 
     const saveFarmerDetails = async (props) => {
       // 👇️ navigate to /contacts

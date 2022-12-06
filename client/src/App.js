@@ -19,6 +19,7 @@ import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
 import CreateProfile from "./screens/CreateProfile";
 import CreatePilotProfile from "./screens/CreatePilotProfile";
 import MyBookings from "./screens/MyBookingScreen"
+import testMap from "./screens/TestMap"
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
 // import hotelimage from "./images/back.png";
@@ -59,6 +60,8 @@ function App() {
          <Route path="/createprofile" component={CreateProfile}/>
          <Route path="/createpilotprofile" component={CreatePilotProfile}/>
          <Route path="/MyBookings" component={MyBookings}/>
+         <Route path="/testMap" component={testMap}/>
+
       </BrowserRouter>
     </div>
     // </div>

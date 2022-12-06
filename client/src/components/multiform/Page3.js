@@ -27,28 +27,37 @@ const StepTwo = ({ nextStep, handleFormData, prevStep, values }) => {
             <Form.Group className="mb-3">
               <Form.Label>Plot Type</Form.Label>
      {['radio'].map((type) => (
-        <div key={`reverse-${type}`} className="mb-3">
+        <div key={`reverse-${type}`} 
+        className="mb-3">
           <Form.Check
+            onChange={handleFormData("plotType")}
             label="livestock"
             name="plotType"
+            value="livestock"
             type={type}
             id={`reverse-${type}-1`}
           />
           <Form.Check
+            onChange={handleFormData("plotType")}
             label="crop"
             name="plotType"
+            value="crop"
             type={type}
             id={`reverse-${type}-2`}
           />
           <Form.Check
+            onChange={handleFormData("plotType")}
             label="fruit"
             name="plotType"
+            value="fruit"
             type={type}
             id={`reverse-${type}-3`}
           />
           <Form.Check
+            onChange={handleFormData("plotType")}
             label="nursery"
             name="plotType"
+            value="nursery"
             type={type}
             id={`reverse-${type}-3`}
           />

@@ -18,6 +18,7 @@ function Profilescreen() {
             <div className="col-md-6 bs m-2 p-3">
               <h1>Name : {user.name}</h1>
               <h1>Email : {user.email}</h1>
+              <h1>Role : {user.role}</h1>
             </div>
           </div>
         </TabPane>
