@@ -327,7 +327,7 @@ function Bookingscreen({ match }) {
 
                 <div className="row p-3 mb-5 bs" data-aos='flip-right' duration='2000'>
 
-                    <div className="col-md-6 my-auto">
+                    <div className="col-md-4 ">
 
                         <div>
                             <h1> {room.name}</h1>
@@ -335,7 +335,60 @@ function Bookingscreen({ match }) {
                         </div>
 
                     </div>
-                    <div className="col-md-6 text-right">
+                    
+                    <div className="row-md-2 ">
+
+                        <div>
+                            <h1>West Plot A</h1>
+                            <img src="https://images.pexels.com/photos/96715/pexels-photo-96715.jpeg?auto=compress&cs=tinysrgb&w=1600" style={{width: '50px',height: '120px'}}/>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" ></input>
+                                     <label class="form-check-label" for="flexRadioDefault1">
+                                     Crop 1
+                                    </label>
+                                </div>
+                                
+                        </div>
+                        <div>
+                            <h1> East Plot B</h1>
+                            <img src="https://images.pexels.com/photos/974314/pexels-photo-974314.jpeg?auto=compress&cs=tinysrgb&w=1600" style={{width: '50px',height: '120px'}}/>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
+                                     <label class="form-check-label" for="flexRadioDefault1">
+                                     Crop 2
+                                    </label>
+                                </div>
+                        </div>
+                    </div>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <br></br>
+                    <div className="row-md-2 ">
+                        <div>
+                            <h1> South Plot C</h1>
+                            <img src="https://images.pexels.com/photos/265216/pexels-photo-265216.jpeg?auto=compress&cs=tinysrgb&w=1600" style={{width: '50px',height: '120px'}}/>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
+                                     <label class="form-check-label" for="flexRadioDefault1">
+                                     Crop 3
+                                    </label>
+                                </div>
+                        </div>
+                        <div>
+                            <h1> North Plot D</h1>
+                            <img src="https://images.pexels.com/photos/235725/pexels-photo-235725.jpeg?auto=compress&cs=tinysrgb&w=1600" style={{width: '50px',height: '120px'}}/>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1"></input>
+                                     <label class="form-check-label" for="flexRadioDefault1">
+                                     Crop 4
+                                    </label>
+                                </div>
+                        </div>
+
+                    </div>
+                    
+                    <div className="col-md-4 text-right">
                         <div>
                             <h1><b>Booking Details</b></h1>
                             <hr/>

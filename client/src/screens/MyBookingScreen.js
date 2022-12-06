@@ -12,19 +12,26 @@ const { TabPane } = Tabs;
 const user = JSON.parse(localStorage.getItem('currentUser'))
 function MyBookingScreen() {
   return (
+    
     <div className="mt-5 ml-3">
       <Link to="/home">
              <button className='btn btn-primary'>Create a New Booking</button>
-          </Link>
+      </Link>
+
+
       <Tabs defaultActiveKey="1">
         <TabPane tab="Booking Schedule" key="1">
+        <div className="col-md-30" data-aos='zoom-in'>
           <h1>
             <MyOrders />
           </h1>
+          </div>
         </TabPane>
-      </Tabs>
 
-    </div>
+      </Tabs>
+ </div>
+   
+   
   );
 }
 
