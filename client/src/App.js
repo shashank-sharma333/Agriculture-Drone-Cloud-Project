@@ -18,11 +18,11 @@ import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
 import CreateProfile from "./screens/CreateProfile";
 import CreatePilotProfile from "./screens/CreatePilotProfile";
-import MyBookings from "./screens/MyBookingScreen"
+
 import './App.css'
 import RegisterPilotScreen from "./screens/RegisterPilotScreen";
 
-import DroneManagement from "./screens/DroneManagement";
+import DroneManagement from "./screens/Dronemanagement";
 
 import MyBookingScreen from "./screens/MyBookingScreen";
 
@@ -62,7 +62,7 @@ function App() {
          <Route path="/selectionscreen" component={SelectionScreen}/>
          <Route path="/registerpilot" component={RegisterPilotScreen}/>
 
-         <Route path="/MyBookings" component={MyBookings}/>
+         
          <Route path="/droneManagement" component={DroneManagement}/>
         
          
