@@ -18,6 +18,7 @@ import SelectionScreen from "./screens/SelectionScreen";
 import RegisterFarmerScreen from "./screens/RegisterFarmerScreen";
 import CreateProfile from "./screens/CreateProfile";
 import CreatePilotProfile from "./screens/CreatePilotProfile";
+import MyBookings from "./screens/MyBookingScreen"
 
 
 import './App.css'
@@ -70,7 +71,8 @@ function App() {
 
          <Route path="/createprofile" component={CreateProfile}/>
          <Route path="/createpilotprofile" component={CreatePilotProfile}/>
-         <Route path="/testMap" component={testMap}/>
+         <Route path="/MyBookings" component={MyBookings}/>
+
          <Route path="/MyBookings" component={MyBookingScreen}/>
       </BrowserRouter>
     </div>
